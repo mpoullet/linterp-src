@@ -1,5 +1,5 @@
 # Makefile for linterp, Linear Methods for Image Interpolation demo
-# Pascal Getreuer 
+# Pascal Getreuer
 # Mar 23, 2011
 
 # The FFTW3 single precision library (http://www.fftw.org) is required.
@@ -21,7 +21,7 @@ SHELL=/bin/sh
 CFLAGS=-O3 -ansi -pedantic -Wall -Wextra
 LDFLAGS=-lm $(LDFFTW3) $(LDLIBJPEG) $(LDLIBPNG) $(LDLIBTIFF)
 
-## 
+##
 # These statements add compiler flags to define LIBJPEG_SUPPORT, etc.,
 # depending on which libraries have been specified above.
 ifneq ($(LDLIBJPEG),)
@@ -38,7 +38,7 @@ ALLCFLAGS=$(CFLAGS) $(CJPEG) $(CPNG) $(CTIFF)
 
 LINTERP_SOURCES=linterpcli.c linterp.c lkernels.c lprefilt.c adaptlob.c imageio.c basic.c strutil.c
 IMCOARSEN_SOURCES=imcoarsen.c imageio.c basic.c strutil.c
-IMDIFF_SOURCES=imdiff.c conv.c imageio.c basic.c 
+IMDIFF_SOURCES=imdiff.c conv.c imageio.c basic.c
 SOURCES=basic.c basic.h conv.c conv.h imageio.c imageio.h imcoarsen.c imdiff.c \
 adaptlob.c adaptlob.h linterpcli.c linterp.c linterp.h \
 lkernels.c lkernels.h lprefilt.c lprefilt.h strutil.c strutil.h \
