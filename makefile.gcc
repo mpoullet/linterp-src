@@ -54,13 +54,13 @@ IMDIFF_OBJECTS=$(IMDIFF_SOURCES:.c=.o)
 all: linterp imcoarsen imdiff
 
 linterp: $(LINTERP_OBJECTS)
-	$(CC) $(LDFLAGS) $(LINTERP_OBJECTS) -o $@
+	$(CC) $(LINTERP_OBJECTS) $(LDFLAGS) -o $@
 
 imcoarsen: $(IMCOARSEN_OBJECTS)
-	$(CC) $(LDFLAGS) $(IMCOARSEN_OBJECTS) -o $@
+	$(CC) $(IMCOARSEN_OBJECTS) $(LDFLAGS) -o $@
 
 imdiff: $(IMDIFF_OBJECTS)
-	$(CC) $(LDFLAGS) $(IMDIFF_OBJECTS) -o $@
+	$(CC) $(IMDIFF_OBJECTS) $(LDFLAGS) -o $@
 
 .c.o:
 	$(CC) -c $(ALLCFLAGS) $< -o $@
